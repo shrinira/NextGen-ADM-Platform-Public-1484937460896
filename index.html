@@ -29,7 +29,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	
-	<base target="_blank">
+	<!-- <base target="_blank">  -->
 
 </head>
 
@@ -40,7 +40,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-				<a href="http://www.ibm.com/devops"><img src="img/IBMlogow.png" height="52"></a>
+				<a href="http://www.ibm.com/devops" target="_blank"><img src="img/IBMlogow.png" height="52"></a>
 			</div>
 			<div class="navbar-header page-scroll">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 			
@@ -114,9 +114,9 @@
 					</br>
 					<p align="justify">
 						Our vision is to facilitate the best in class instrumentation, leveraged by advanced software engineering methods to IBM GBS Projects across various Sectors and Service Lines, with an aim to standardize the Application Development practices accross GBS. The platform is built on IBM Cloud, adopts open source technologies, and promulgates advanced SE methods like IBM Bluemix garage Method, DevOps, Agile and Design Thinking.
-					</p>
-					<p align="justify">
-						
+					</p></br>
+					<p align="left">
+						<i><b>Tools Currently Provisioned in the Platform:</i></b>
 					</p>
 					</br></br>
                 </div>
@@ -126,7 +126,7 @@
 					<img src="img/JIRA.png" height="52">
 				</div>
 				<div class="col-lg-3">
-					<img src="img/GitLab_logo.png" height="52">
+					<img src="img/Gitlab_logo.png" height="52">
 				</div>
 				<div class="col-lg-3">
 					<img src="img/jenkins1.png" height="52">
@@ -141,7 +141,7 @@
 					<img src="img/sonarqube_185.png" height="52">
 				</div>
 				<div class="col-lg-3">
-					<img src="img/UCD-big.png" height="62">
+					<img src="img/ucd-big.png" height="62">
 				</div>
 				</br></br></br></br></br>
 			</div>
@@ -155,7 +155,8 @@
             </div>
 			
 			<div class="col-lg-8 col-lg-offset-2 text-center">
-				<a href="#" class="btn btn-lg btn-outline1">
+				<a data-toggle="modal" href="#toolchain-modal" class="btn btn-lg btn-outline1">
+					<!-- <a href="app/Toolchain/project_details_new.html" class="btn btn-default">Create Toolchain</a> -->
 					<i class="fa"></i>Create Your Toolchain
 				</a>
 			</div>
@@ -184,7 +185,7 @@
 						</div>
 						<div class="col-lg-4">
 							<a data-toggle="modal" href="#gitlab-modal" class="btn btn-lg btn-tool">
-								<i class="fa"></i><img src="img/GitLab_logo.png" height="52">
+								<i class="fa"></i><img src="img/Gitlab_logo.png" height="52">
 							</a>
 						</div>
 					</div>
@@ -195,20 +196,20 @@
 							</a>
 						</div>
 						<div class="col-lg-4">
-							<a href="#" class="btn btn-lg btn-tool">
-								<i class="fa"></i><img src="img/artifactory-big.png" height="52">
+							<a data-toggle="modal" href="#af-modal" class="btn btn-lg btn-tool">
+								<i class="fa"></i><img src="/img/artifactory-big.png" height="52">
 							</a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-4">
-							<a href="#" class="btn btn-lg btn-tool">
+							<a data-toggle="modal" href="#sq-modal" class="btn btn-lg btn-tool">
 								<i class="fa"></i><img src="img/sonarqube_185.png" height="52">
 							</a>
 						</div>
 						<div class="col-lg-4">
-							<a href="#" class="btn btn-lg btn-tool">
-								<i class="fa"></i><img src="img/UCD-big.png" height="52">
+							<a data-toggle="modal" href="#ucd-modal" class="btn btn-lg btn-tool">
+								<i class="fa"></i><img src="img/ucd-big.png" height="52">
 							</a>
 						</div>
 					</div>
@@ -220,7 +221,7 @@
 					</div>
 					</br>
 					<div class="col-lg-8 col-lg-offset-2 text-center">
-						<a href="#" class="btn btn-lg btn-outline1">
+						<a data-toggle="modal" href="#ticket-modal" class="btn btn-lg btn-outline1">
 							<i class="fa"></i>Contact Support
 						</a>
 					</div>
@@ -261,7 +262,7 @@
                     <h2>Case Studies</h2>
 					</br>
 					<div class="col-lg-8 col-lg-offset-2 text-center">
-						<a href="http://www.ibm.com/ibm/devops/us/en/casestudies/" class="btn btn-lg btn-outline1">
+						<a href="http://www.ibm.com/ibm/devops/us/en/casestudies/" class="btn btn-lg btn-outline1" target="_blank">
 							<i class="fa"></i>Case Studies
 						</a>
 					</div>
@@ -388,7 +389,7 @@
    <!-- Modal -->
    
    
-   <div id="video-modal" class="modal fade" role="dialog">
+   <div id="video-modal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
 		<div class="modal-dialog">
 			<!-- Modal content-->
 			<div class="modal-content">
@@ -403,6 +404,24 @@
 		</div>
 	</div>
 	
+	
+	<div id="ticket-modal" class="modal fade" role="dialog">
+		<div class="terms-modal modal-dialog">
+			<!-- Modal content-->
+			<div class="terms-modal modal-content">
+				<div class="modal-header" align="center">
+					<h2>Contact Support</h2>
+				</div>
+				<div class="modal-body" style="padding-top:3%;">
+					<div class="col-lg-12">
+						<object type="text/html" data="https://gbsjira.in.edst.ibm.com/servicedesk/customer/portal/3" width="100%" height="400px">
+						</object></br></br>
+					</div>
+				</div>
+				<div class="model-footer" align="center" style="padding-bottom:7%;"><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button></div>
+			</div>
+		</div>
+	</div>
    
    
 	<div id="terms-modal" class="modal fade" role="dialog">
@@ -410,6 +429,7 @@
 		<!-- Modal content-->
 		<div class="terms-modal modal-content">
 			<div class="modal-header">
+				<button ng-if="modal.dismissable" type="button" ng-click="$dismiss()" class="close" align="right">&times;</button>
 				<h2>Platform Terms of Use</h2>
 			</div>
 			<div class="modal-body">
@@ -430,7 +450,7 @@
 						<h3 align="left"> <b> Contractual, Statutory, and Regulatory Controls: </b> </h3>
 						<ol  style="font-size:16px">
 							<li> Next Gen ADM Platform should not be used to store any Personal Information, Sensitive Personal Information and Business Sensitive Information.</li>
-							<li> Next Gen ADM Platform uses a hybrid toolchain consisting of Open Source, IBM and third party tools. Onboarded project teams will share common instances of tools. Controls are put in place for project level access. Details can be found <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W5e0fededea30_4fc4_b5fa_49f338f0a953/page/Next%20Generation%20ADM%20Platform%20-%20Architecture%20overview" ><i>here</i></a>.</li>
+							<li> Next Gen ADM Platform uses a hybrid toolchain consisting of Open Source, IBM and third party tools. Onboarded project teams will share common instances of tools. Controls are put in place for project level access. Details can be found <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W5e0fededea30_4fc4_b5fa_49f338f0a953/page/Next%20Generation%20ADM%20Platform%20-%20Architecture%20overview" target="_blank"><i>here</i></a>.</li>
 							<li> Project teams are responsible to ensure that usage of the platform does not violate any regulatory, statutory and contractual terms applicable to their projects.</li>
 						</ol>
 					</div>
@@ -440,13 +460,13 @@
 						<ol style="font-size:16px">
 							<li> Project Teams are responsible to ensure that their usage of the platform complies to the following IBM Policies.
 								<ol type="a">
-									<li> <a href="http://w3-03.ibm.com/transform/sas/as-web.nsf/ContentDocsByTitle/Cloud+Security+Policy">
+									<li> <a href="http://w3-03.ibm.com/transform/sas/as-web.nsf/ContentDocsByTitle/Cloud+Security+Policy" target="_blank">
 									IBM Cloud Security Policy</a></li>
-									<li> <a href="http://w3-03.ibm.com/transform/sas/as-web.nsf/ContentDocsByTitle/Information+Technology+Security+Standards">
+									<li> <a href="http://w3-03.ibm.com/transform/sas/as-web.nsf/ContentDocsByTitle/Information+Technology+Security+Standards" target="_blank">
 									ITCS104</a></li>
-									<li> <a href="http://w3-03.ibm.com/transform/sas/as-web.nsf/ContentDocsByTitle/Security+and+Use+Standards+for+IBM+Employees">
+									<li> <a href="http://w3-03.ibm.com/transform/sas/as-web.nsf/ContentDocsByTitle/Security+and+Use+Standards+for+IBM+Employees" target="_blank">
 									ITCS300</a></li>
-									<li> <a href="https://w3-03.ibm.com/ibm/documents/corpdocweb.nsf/ContentDocsByTitle/Corporate+Instruction+LEG+116">
+									<li> <a href="https://w3-03.ibm.com/ibm/documents/corpdocweb.nsf/ContentDocsByTitle/Corporate+Instruction+LEG+116" target="_blank">
 									LEG116</a></li>
 								</ol>
 							</li>
@@ -454,7 +474,7 @@
 							<li> Project teams are responsible for controlling access to their project areas in the platform. Request for access revocation for off boarded team members should be raised atleast one business day before off-boarding. </li>
 							<li> When project is being closed, project team should raise a closure request atleast one business day ahead of closure of the project. </li>
 							<li> Project teams are required to provide any special instructions for requirements of Data Retention and Archival during project closure. Project Liberty team will provide additional cost estimates for such requests based on viability. </li>
-							<li> Project Liberty ensures a daily backup for the Configuration Items of the Platform. Backup Policy can be found <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W5e0fededea30_4fc4_b5fa_49f338f0a953/page/Backup%20Policy"><i>here</i></a>.</li>
+							<li> Project Liberty ensures a daily backup for the Configuration Items of the Platform. Backup Policy can be found <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W5e0fededea30_4fc4_b5fa_49f338f0a953/page/Backup%20Policy" target="_blank"><i>here</i></a>.</li>
 						</ol>
 					</div>
 					<br>
@@ -473,7 +493,7 @@
 					<div>
 						<h3 align="left"> <b>Service Level Agreements:</b> </h3>
 						<ol style="font-size:16px">
-							<li> Service Level agreements can be referred <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W5e0fededea30_4fc4_b5fa_49f338f0a953/page/Service%20Level%20Agreements"><i>here</i></a></li>
+							<li> Service Level agreements can be referred <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W5e0fededea30_4fc4_b5fa_49f338f0a953/page/Service%20Level%20Agreements" target="_blank"><i>here</i></a></li>
 						</ol>
 						<br>
 						<br>
@@ -486,61 +506,33 @@
 	</div>
 	
 	
-	<div id="-modal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header" align="center">
-					<h2>Jira</h2>
-				</div>
-				<div class="modal-body" style="padding-top:3%;">					 
-					
-				</div>
-				<div class="model-footer" align="center" style="padding-bottom:7%;"><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button></div>
-			</div>
-		</div>
-	</div>
-	
-	
-	
-	
 	<div id="jira-modal" class="modal fade" role="dialog">
 		<div class="terms-modal modal-dialog">
 			<!-- Modal content-->
-			<div class="terms-modal modal-content">
+			<div class="terms-modal modal-content" align="left">
 				<div class="modal-header" align="center">
 					<h2>Jira FAQ</h2>
 				</div>
-				<div class="modal-body" style="padding-top:3%;">
-					<p> <a href="https://gbsjira.in.edst.ibm.com/"><i>JIRA</i></a> is used for bug tracking, issue tracking, and project management. The basic use of this tool is to track issues, and bugs related to your software and mobile apps </p>
-					<br>
-					
-					<!-- <h3 id="jenkins-t-o-c">Table of Contents</h3>
-					<div class="row">
-						<ul class="li-big">
-							<li><a href="#jira-plugin">What JIRA plug-ins are available?</a></li>
-							<li><a href="#jira-portfolio">Can I do portfolio management using JIRA?</a></li>
-						</ul>
-					</div>  -->
-
+				<div class="modal-body" style="padding-top:3%;" align="left">
+					<p> <a href="https://gbsjira.in.edst.ibm.com/" target="_blank"><i>JIRA</i></a> is used for bug tracking, issue tracking, and project management. The basic use of this tool is to track issues, and bugs related to your software and mobile apps </p><br>
 					<div id="jira-plugin">
-							<h3>What JIRA plug-ins are available?</h3>
+							<p><i><b>What JIRA plug-ins are available?</b></i></p>
 							<p> Some of the plugins are:</p>
 
-							<ul class="li-big" align="left">
+							<ul class="li-big">
 								<li> Git Integration for JIRA </li>
 								<li> SAML SingleSignOn for JIRA </li>
 								<li> Email This Issue </li>
 								<li> Zephyr for JIRA - Test Management </li>
 							</ul>
-							<p> (For more please refer to: <a href="https://marketplace.atlassian.com/plugins/com.metainf.jira.plugin.emailissue/server/overview"> <i> Atlassian Marketplace </i> </a> )</p></br>
+							<p> (For more please refer to: <a href="https://marketplace.atlassian.com/plugins/com.metainf.jira.plugin.emailissue/server/overview" target="_blank"> <i> Atlassian Marketplace </i> </a> )</p></br>
 					</div>
 
 					<div id="jira-portfolio">
-						<h3>Can I do portfolio management using JIRA?</h3>
+						<p><i><b>Can I do portfolio management using JIRA?</b></i></p>
 						<p>Yes. You can use JIRA to do higher-level roadmap/portfolio planning. It can plan and manage your projects across
 							multiple teams.</br>
-							<a href="https://confluence.atlassian.com/jiraportfoliocloud/portfolio-for-jira-home-715263250.html"> <i> Portfolio management for Jira </i> </a></br></br>
+							<a href="https://confluence.atlassian.com/jiraportfoliocloud/portfolio-for-jira-home-715263250.html" target="_blank"> <i> Portfolio management for Jira </i> </a></br></br>
 						</p>
 					</div>
 					<div class="model-footer" align="center" style="padding-bottom:7%;">
@@ -555,13 +547,13 @@
 	<div id="gitlab-modal" class="modal fade" role="dialog">
 		<div class="terms-modal modal-dialog">
 			<!-- Modal content-->
-			<div class="terms-modal modal-content">
+			<div class="terms-modal modal-content" align="left">
 				<div class="modal-header" align="center">
 					<h2>Gitlab FAQ</h2>
 				</div>
-				<div class="modal-body" style="padding-top:3%;">
+				<div class="modal-body" style="padding-top:3%;" align="left">
 					<div>
-						<p> <a href="https://gbsgit.in.edst.ibm.com/"><i> Gitlab </i></a> is a tool for Source Code Configuration Management and it also supports code review process. It is a distributed Source Control Management (SCM) </p><br>
+						<p> <a href="https://gbsgit.in.edst.ibm.com/" target="_blank"><i> Gitlab </i></a> is a tool for Source Code Configuration Management and it also supports code review process. It is a distributed Source Control Management (SCM) </p><br>
 					</div>
 					
 					<div>
@@ -575,12 +567,12 @@
 						</ul>
 					</div>
 					<div id="git-scm" align="left">
-						</br><h4>What is Distributed SCM?</h4>
+						</br><p><i><b>What is Distributed SCM?</b></i></p>
 						<p> The Distributed SCM has a source code placed in the Web where every user or developer can work on a given project/code without requiring them to share a common network. Each changes will be tracked separately and will have the unique id. It takes a peer-to-peer approach to version control. Distributed SCM synchronizes repositories by exchanging patches (set of changes) from peer to peer. </p>
 					</div>
 
 					<div id="git-benefit" align="left">
-						</br><h4>What is the benefit of the distributed SCM?</h4>
+						</br><p><i><b>What is the benefit of the distributed SCM?</b></i></p>
 						<br>
 						<p> Some of the benefits are</p>
 						<p> <b> <i>It works offline. </i> </b> </p>
@@ -594,17 +586,17 @@
 					</div>
 
 					<div id="git-edition" align="left">
-						</br><h4 class="section-title">Do we get GitLab enterprise edition or community edition?</h4>
+						</br><p><i><b>Do we get GitLab enterprise edition or community edition?</b></i></p>
 						<p>Project team will be provided with Gitlab Enterprise edition.</p>
 					</div>
 
 					<div id="git-access" align="left">
-						</br><h4>Will I get admin access to the tool?</h4>
+						</br><p><i><b>Will I get admin access to the tool?</b></i></p>
 						<p>Restricted admin access, to your project. You can Create project, Starred/Explore project and search options etc.</p>
 					</div>
 
 					<div id="git-profsetup" align="left">
-						</br><h4>How can I setup my profile?</h4>
+						</br><p><i><b>How can I setup my profile?</b></i></p>
 						<p> Once your login is successful with w3id credentials on IBM gitlab Instance, Click your username in the top right corner. </p>
 						<ul>
 							<li> Click <b> Edit Profile. </b> </li>
@@ -627,13 +619,10 @@
 				<div class="modal-header" align="center">
 					<h2>Jenkins FAQ</h2>
 				</div>
-				<div class="modal-body" style="padding-top:3%;">
+				<div class="modal-body" style="padding-top:3%;" align="left">
 					<div>
 						<p><a href="https://jenkinsliberty.eu-gb.mybluemix.net" target="_blank"><i>Jenkins</i></a> is continuous integration software tool written in Java programming language for testing and reporting on isolated changes in a larger code base in real time. <br></p>
 					</div>
-				</div>
-
-				<div>
 					<div>
 						<h3 id="jenkins-t-o-c">Table of Contents</h3>
 						<div class="row">
@@ -643,78 +632,615 @@
 									<li><a class="toc-links" href="#jenk-plugin">Will I be able to install my own plugin?</a></li>
 									<li><a class="toc-links" href="#jenk-lockout">Will Jenkins Prevent lockout?</a></li>
 									<li><a class="toc-links" href="#jenk-build-trigger">How can I configure to trigger a build when code is checked in?</a></li>
-								</ul>
+								</ul></br>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div>
-					<div id="jenk-access">
-						<h3 class="section-title">What access will I have in Jenkins?</h3>
-						<p>You can create jobs, build the script, view the build history, install required plugins from the available list etc. </p>
-					</div>
-				</div>
-
-				<div id="jenk-plugin">
 					<div>
-						<h3 class="section-title">Will I be able to install my own plugin?</h3>
-						<p>Yes, Next Gen platform team will provide a default set of plugins that we have evaluated and recommend to get you started.</p>
+						<div id="jenk-access">
+							<p><i><b>What access will I have in Jenkins?</b></i></p>
+							<p>You can create jobs, build the script, view the build history, install required plugins from the available list etc. </p></br>
+						</div>
 					</div>
-				</div>
 
-				<div id="jenk-lockout">
-					<div>
-						<h3 class="section-title">Will Jenkins Prevent lockout?</h3>
-						<p> Yes, find the details below disabling this feature in your browser</p>
-						<br>
-						<h4><b> Google Chrome </b></h4>
+					<div id="jenk-plugin">
+						<div>
+							<p><i><b>Will I be able to install my own plugin?</b></i></p>
+							<p>Yes, Next Gen platform team will provide a default set of plugins that we have evaluated and recommend to get you started.</p></br>
+						</div>
+					</div>
+
+					<div id="jenk-lockout">
+						<p><i><b>Will Jenkins Prevent lockout?</b></i></p>
+						<p> Yes, find the details below disabling this feature in your browser</p></br>
+						<p><i><b> Google Chrome </b></i></p>
 						<ol>
 							<li> In the top right, click the icon you see: Menu Chrome menu or More More.</li>
 							<li> Click Settings > Show advanced settings.</li>
 							<li> Under &ldquo;Passwords and forms&rdquo;, uncheck Enable Autofill to fill out web forms in a single click. To turn Autofill back on, simply check the box again. </li>
-						</ol>
-						<br>
-						<h4><b> Mozilla Firefox </b></h4>
+						</ol></br>
+						<p><i><b> Mozilla Firefox </b></i></p>
 						<ol>
 							<li> Click the menu button and choose &ldquo;Preferences&rdquo;.</li>
 							<li> Select the &ldquo;Privacy&rdquo; panel.</li>
 							<li> In the drop-down menu next to &ldquo;Firefox will&rdquo;; choose Use custom settings for history.</li>
 							<li> Remove the check mark next to &ldquo;Remember search and form history&rdquo;.</li>
 							<li> Close the &ldquo;about: preferences&rdquo; page. Any changes you&rsquo;ve made will automatically be saved.</li>
-						</ol>
-						<br>
-						<h4><b> Safari </b></h4>
+						</ol></br>
+						<p><i><b> Safari </b></i></p>
 						<ol>
 							<li> Click on Safari in the program menu and select &ldquo;Preferences&rdquo; in the drop-down menu. </li>
 							<li> Click the &ldquo;Autofill&rdquo; tab in the Preferences window.</li>
 							<li> Click on each of the check boxes next to the autofill options to deselect them, turning off the autocomplete for each option. </li>
-						</ol>
-
+						</ol></br>
 					</div>
-				</div>
 
-				<div id="jenk-build-trigger">
-					<div>
-						<h3 class="section-title">How can I configure to trigger a build when code is checked in?</h3>
+					<div id="jenk-build-trigger">
+						<p><i><b>How can I configure to trigger a build when code is checked in?</b></i></p>
 						<ol>
 							<li>Set the Jenkins job's Build trigger to Poll SCM, but do not specify a schedule</li>
 							<li>Create a gitlab post-receive trigger to notify the URL </li>
 							<li>Example http://yourserver/jenkins/git/notifyCommit?url=<URL (http://yourserver/jenkins/git/notifyCommit?url=%3CURL)  of the Git repository></li>
 							<li>This will trigger all builds that poll the specified git repo.</li>
 							<li>However, polling actually checks whether anything has been pushed to the used branch</li>
-						</ol>
-						</br>
+						</ol></br>
 					</div>
-				</div>
-				<div class="model-footer" align="center" style="padding-bottom:7%;">
-					<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					<div class="model-footer" align="center" style="padding-bottom:7%;">
+						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
 	
+	<div id="af-modal" class="modal fade" role="dialog">
+		<div class="terms-modal modal-dialog">
+			<!-- Modal content-->
+			<div class="terms-modal modal-content">
+				<div class="modal-header" align="center">
+					<h2>Artifactory FAQ</h2>
+				</div>
+				<div class="modal-body" style="padding-top:3%;" align="left">
+					<div>
+						<!--<h1 class="section-title"> ARTIFACTORY </h1>-->
+						<p> <a href=" https://gbsartifactory.in.edst.ibm.com" target="_blank"><i>Artifactory</i></a> is a binary repository manager. We use source control for our source code,<br> Artifactory is version control (and more) for your binary artifacts (jar/war files, etc). <br> Artifactory is also a place where you can put a shared library so that it is easily accessible in other projects across the enterprise. </p>
+						<br>
+						<p> Lights on Artifactory: <a href="https://www.youtube.com/watch?v=aa4YBDUDWy0" target="_blank"> https://www.youtube.com/watch?v=aa4YBDUDWy0 </a> </p>
+					</div>
+					<div>
+						<h3 id="jenkins-t-o-c">Table of Contents</h3>
+						<div class="row">
+							<div class="col-12">
+								<ul>
+									<li><a class="toc-links"  href="#arti-keyscenario">What are the key scenarios to use Artifactory?</a></li>
+									<li><a class="toc-links"  href="#arti-maxsize">What is the maximum size of files uploaded?</a></li>
+									<li><a class="toc-links"  href="#arti-reposize">What is the default repository size threshold?</a></li>
+									<li><a class="toc-links"  href="#arti-retainfiles">How long will the uploaded files be retained?</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div>
+						<p><i><b>What are the key scenarios to use Artifactory?</b></i></p>
+						<ul>
+							<li> Rebuilding from source introduces points of failure and change. <br> By having an artifact in a binary repository you have a versioned copy of the tested artifact. </li>
+							<li> Binaries are versioned; it is easy to have multiple versions of libraries across the projects. </li>
+							<li> Integrating with CI server like Jenkins will can have the clean builds which are automatically published with meta data about the build. </li>
+							<li> Artifactory has &ldquo;virtual repositories&rdquo; that are proxies to all of the &ldquo;well known&rdquo; maven repositories on the internet. <br> This gives you access to most of the public shared libraries such as Apache Commons, Spring, Hibernate, etc..; through one conduit. </li>
+
+						</ul>
+					</div>
+					<div>
+						<p><i><b>What is the maximum size of files uploaded?</b></i></p>
+						<p>By default, you can upload up to 100 MB at a time</p>
+					</div>
+					<div>
+						<p><i><b>What is the default repository size threshold?</b></i></p>
+						<p>By default, 20GB per project</p>
+
+					</div>
+					<div>
+						<p><i><b>How long will the uploaded files be retained?</b></i></p>
+						<p> By default, last 10 versions </p>
+					</div>
+				</div>
+				<div class="model-footer" align="center" style="padding-bottom:7%;"><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button></div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="sq-modal" class="modal fade" role="dialog">
+		<div class="terms-modal modal-dialog">
+			<!-- Modal content-->
+			<div class="terms-modal modal-content">
+				<div class="modal-header" align="center">
+					<h2>SonarQube FAQ</h2>
+				</div>
+				<div class="modal-body" style="padding-top:3%;" align="left">					 
+					<div>
+						<p>  <br> <a href="https://sonarliberty.mybluemix.net/" target="_blank"><i>Sonar</i></a> is an open source platform used by development teams to manage source code quality. Sonar has been developed with a main objective in mind: make code quality management accessible to everyone with minimal effort </p>
+					</div>
+					<div>
+						<p> As such, Sonar provides code analyzers, reporting tools, defects hunting modules and Time Machine as core functionality. But it also embarks a plugin mechanism enabling the community to extend the functionality (more than 35 plugins available), making Sonar the one-stop-shop for source code quality by addressing not only developers but also manager&rsquo;s needs. </p>
+						<p> In terms of languages, Sonar support analysis of Java in the core, but also of Flex (ActionScript 3), PHP, PL/SQL and Cobol through plugins (Open Source or commercial) as the reporting engine is language agnostic. </p><br>
+						<ul align="left">
+							<p> Since version 2.0, Sonar enables to cover quality on 7 axes and so to report on: </p>
+							<li> Duplicated code </li>
+							<li> Coding standards </li>
+							<li> Unit tests </li>
+							<li> Complex code </li>
+							<li> Potential bugs </li>
+							<li> Comments </li>
+							<li> Design and architecture </li>
+						</ul>
+						<p> Sonar can be used for one-off audits, but has been designed to support global continuous improvement strategy on code quality in a company and therefore can be used as a shared central repository for quality management. </p>
+					</div>
+					<div>
+						<ul align="left">
+							<li><a class="toc-links" href="#sonar-proglang">Which programming languages will SonarQube support?</a></li>
+							<li><a class="toc-links" href="#sonar-rules">Can I add my own rules?</a></li>
+							<li><a class="toc-links" href="#sonar-char">Which kind of software characteristics will SonarQube measure? </a></li>
+							<li><a class="toc-links" href="#sonar-results">Where can I see SonarQube scan results?</a></li>
+							<li><a class="toc-links" href="#sonar-access"> How can I access SonarQube?</a></li>
+						</ul>
+					</div>
+					<div>
+						<p><i><b>Which programming languages will SonarQube support?</b></i></p>
+						<p> SonarQube supports
+							C/C++, C#, Cobol, flex, java, JavaScript, objective-c, php, PL/I, PL/SQL, Swift, VB.net, VB6.0, Web (html, JSP/JSF), xml.
+						</p>
+					</div>
+					<div>
+						<p><i><b>Can I add my own rules?</b></i></p>
+						<p> <i> Yes, need to raise a request on tool once it&rsquo;s up and running. </i> </p>
+					</div>
+					<div>
+						<p><i><b>Which kind of software characteristics will SonarQube measure? </b></i></p>
+						<ol align="left">
+							<li> Whether the coding has been done following a specific convention </li>
+							<li> Whether well-known/established good practices have been followed and well-known/established bad practices have been avoided </li>
+							<li> Are there any potential bugs and performance issues, security vulnerabilities? </li>
+							<li> Is there any duplicate code? </li>
+							<li> Is the code logic very complex? </li>
+							<li> Whether the public API has good documentation and comments </li>
+							<li> Whether the code has unit tests </li>
+							<li> Whether the code follows good design and architecture principles </li>
+						</ol>
+					</div>
+					<div>
+						<p><i><b>Where can I see SonarQube scan results?</b></i></p>
+						<p> Once logged in to sonarQube, In Dashboard section you can find the sonar test results of the project. <br> By navigating from the you can see the list of results in the dashboard. </p>
+					</div>
+					<div>
+						<p><i><b>How can I access SonarQube?</b></i></p>
+						<p>You will be provided a separate project specific user credentials for SonarQube. You cannot use w3ID login for SonarQube</p>
+					</div>
+				</div>
+				<div class="model-footer" align="center" style="padding-bottom:7%;"><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button></div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="ucd-modal" class="modal fade" role="dialog">
+		<div class="terms-modal modal-dialog">
+			<!-- Modal content-->
+			<div class="terms-modal modal-content">
+				<div class="modal-header" align="center">
+					<h2>UrbanCode Deploy FAQ</h2>
+				</div>
+				<div class="modal-body" style="padding-top:3%;" align="left">					 
+					<div>
+						<p> IBM <a href="https://169.50.117.227:8443/" target="_blank"><i>UrbanCode Deploy</i></a> is a tool for automating application deployments through your environments. It is designed to facilitate rapid feedback and continuous delivery in agile development while providing the audit trails, versioning and approvals needed in production. </p><br>
+					</div>
+					<div>
+						<h3>Table of Contents</h3></br>
+						<ul>
+							<li><a class="toc-links" href="#ucd-bene"> What is the benefit of using UCD? </a></li>
+							<li><a class="toc-links" href="#ucd-steps"> What are the basic steps to run a deployment in UCD ? </a></li>
+							<li><a class="toc-links" href="#ucd-access"> Will I get admin access to the tool? </a></li>
+						</ul>
+					</div>
+					<div>
+						<p><i><b> What is the benefit of using UCD?  </b></i></p>
+						<br><p> IBM UrbanCode Deploy is an automated Deployment tool that provides a comprehensive process orchestration tool to support advanced scenarios of multi-components applications ( app, load balancer, database, ...) , asset goverance, environment management, and inventory of what is deployed where. </p>
+						<br> <br>
+					</div>
+					<div>
+						<p><i><b> What are the basic steps to run a deployment in UCD ? </b></i></p>
+						<br><p> The basic steps are: <br>
+						<ol>
+							<li> Setup applications and environment </li>
+							<li> Plan the release </li>
+							<li> Create or modify deployment plans </li>
+							<li> Run deployments </li>
+						</ol>
+						</p> <br> <br>
+					</div>
+					<div>
+						<p><i><b> Will I get admin access to the tool? </b></i></p>
+						<br><p> Restricted admin access, to your project. </p><br><br>
+					</div>
+				</div>
+				<div class="model-footer" align="center" style="padding-bottom:7%;"><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button></div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="toolchain-modal" class="fs-modal modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="fs-modal modal-content">
+				<div class="modal-header" align="center">
+					<button ng-if="modal.dismissable" type="button" ng-click="$dismiss()" class="close" align="right">&times;</button>
+					<h2>Automated Toolchain Provisioning</h2>
+				</div>
+				<div class="modal-body" style="padding:3%;"  align="left">
+					<form role="form">
+						<div class="form-group" ng-class="{ 'has-error' : userForm.Project_name.$invalid && !userForm.Project_name.$pristine }">
+							<label> Project Name <span class="form-required"> * </span>
+								<a target="_blank" title="The name of the project to be created"><img style="cursor: pointer;" src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="10px"/></a>
+							</label>
+							<input type="text" name="Project_name" class="form-control" ng-model="proje_name" required>
+							<p ng-show="userForm.Project_name.$invalid && !userForm.Project_name.$pristine" class="help-block"> Project name is required.</p>
+						</div>
+						<div class="form-group" ng-class="{ 'has-error' : userForm.Project_ID.$invalid && !userForm.Project_ID.$pristine }">
+							<label> Project ID <span class="form-required"> * </span>
+								<a target="_blank" title="The Account ID of your project"><img style="cursor: pointer;" src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="10px"/></a>
+							</label>
+							<input type="text" name="Project_ID" class="form-control" ng-model="proj_id" placeholder="Format: IN-00-00000" required>
+							<p ng-show="userForm.Project_ID.$invalid && !userForm.Project_ID.$pristine" class="help-block"> Project ID is required.</p>
+						</div>
+
+						<div class="form-group" ng-class="{ 'has-error' : userForm.Department_name.$invalid && !userForm.Department_name.$pristine }">
+							<label> Department Name <span class="form-required"> * </span>
+								<a target="_blank"title="The Department code of your project"><img style="cursor: pointer;" src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="10px"/></a>
+							</label>
+							<input type="text" name="Department_name" class="form-control" ng-model="dept_name" placeholder="Format: ABC" required>
+							<p ng-show="userForm.Department_name.$invalid && !userForm.Department_name.$pristine" class="help-block"> Department Name is required.</p>
+						</div>
+						<div class="form-group" ng-class="{ 'has-error' : userForm.Project_Admin.$invalid && !userForm.Project_Admin.$pristine }">
+							<label> Project Admin <span class="form-required"> * </span>
+								<a target="_blank" title="The user ID for whom the Admin access will be provided"><img style="cursor: pointer;" src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="10px"/></a>
+							 </label>
+							<input type="text" name="Project_Admin" class="form-control" ng-model="proje_admin" placeholder="Primary IBM w3 ID" required>
+							<p ng-show="userForm.Project_Admin.$invalid && !userForm.Project_Admin.$pristine" class="help-block"> Admin to the project is required.</p>
+						</div>
+
+						<div class="form-group" ng-class="{ 'has-error' : userForm.NoofUsers.$invalid && !userForm.NoofUsers.$pristine }">
+							<label> No.of Users: <span class="form-required"> * </span>
+								<a target="_blank" title="Tentative count of users who will be using the tools "><img style="cursor: pointer;" src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="10px"/></a>
+							</label>
+							<input type="text" name="NoofUsers" class="form-control" ng-model="user_count" ng-change="costFunc()" placeholder="Tentative count" required>
+							<p ng-show="userForm.NoofUsers.$invalid && !userForm.NoofUsers.$pristine" class="help-block"> Tentative count of Users is required.</p>
+						</div>
+						<br> <br>
+						<div >
+						 <table>
+								<tr ng-show="costDisplay">
+									<br> <br>
+									<td> One Time Setup Cost per user:<br> </td>
+									<td> {{ user_count*299 }} $ </td>
+								</tr>
+								<tr ng-show="costDisplay">
+
+									<td> Monthly recurring cost per user:<br> </td>
+									<td> {{ user_count*89 }} $ <br></td>
+								</tr>
+						</table>
+						</div>
+						<br> <br>
+
+						<div style="margin-bottom: 10%">
+							<input id="checkbox1" type="checkbox" name="authAgree" value="authAgree" onclick="check()" ng-model="authAgree" ng-change="AuthAgree()" style="margin-left:10%; margin-top: 15px"  /> I confirm that I am authorized to create the toolchain for the above mentioned Project, which will result in additional cost for the above project. I am aware that <b style="color: red"> unauthorized creation of toolchain and incurring costs to IBM could be in violation of IBM Personal Business Commitments</b> <br> <br> <br> <br>
+							<input id="checkbox2" type="checkbox" name="licenseAgree" value="licenseAgree" onclick="check()" ng-model="licenseAgree" ng-change="LicenseAgree()" style="margin-left:10%"  />  I confirm that I have read and accepted the <a ng-href="/termsofuse"> Platform Terms of Use </a> <br> <br>
+						</div>
+
+
+						<input id="submit" type="button" name="submit" value="Next >>" class="btn btn-default" style="margin-left: 70%; margin-top: 30px; margin-bottom:30px;" ng-disabled="disabled" ng-click="submitform()" data-toggle="modal" href="#toolchain-modal-2">
+				</div>
+				<div class="model-footer" align="center" style="padding-bottom:7%;"><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button></div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="toolchain-modal-2" class="fs-modal modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="fs-modal modal-dialog">
+			<!-- Modal content-->
+			<div class="fs-modal modal-content" align="left">
+				<div class="modal-header" align="center">
+					<h2>Automated Toolchain Provisioning</h2>
+				</div>
+				<div class="modal-body" style="padding-top:3%;">					 
+					<div style="float: left;margin-left: 20px; margin-top: 20px; margin-bottom: 20px;">
+						<div>
+						<h3> Please specify the technology to create Toolchain : </h3>
+						</div>
+					</div>
+
+
+					<div class="item1" align="left">
+						<!--<img data-ng-click="ucdFunc()" class="i1" src="../../assets/images/ucd.jpg">-->
+						<!--ng-change="WebAppProf()"-->
+						<input ng-model=data ng-change="WebAppProf()" type="radio" name="profile" value="Web Application" style="margin-left:7%; margin-bottom: 30px"> Web Application
+						<table class="techTable" border="1">
+							<!--<tr ng-repeat="x in tableData">-->
+							<tr>
+								<th> Practice Category </th>
+								<td> Think </td>
+								<td> Code </td>
+								<td> Deliver </td>
+								<td> Run </td>
+								<td> Learn </td>
+								<td> Manage </td>
+								<td> Culture </td>
+							</tr>
+							<tr>
+								<th> Practice </th>
+								<td> {{ web_app_practice_think }} </td>
+								<td> {{ web_app_practice_code }} </td>
+								<td> {{ web_app_practice_deliver }} </td>
+								<td> {{ web_app_practice_run }} </td>
+								<td> {{ web_app_practice_learn }} </td>
+								<td> {{ web_app_practice_manage }} </td>
+								<td> {{ web_app_practice_culture }} </td>
+								<!-- <td> <a href="{{x['Link']}}"> <u> {{x['Practice']}} </u> </a></td>-->
+							</tr>
+							<tr>
+								<th> Tool </th>
+								<td> {{ web_app_tool_think }} </td>
+								<td> {{ web_app_tool_code }} </td>
+								<td> {{ web_app_tool_deliver }} </td>
+								<td> {{ web_app_tool_run }} </td>
+								<td> {{ web_app_tool_learn }} </td>
+								<td> {{ web_app_tool_manage }} </td>
+								<td> {{ web_app_tool_culture }} </td>
+								<!--<td>{{x['Future Tool']}}</td>-->
+							</tr>
+							</tr>
+						</table>
+					</div>
+
+					<div class="item1">
+						<!--<img data-ng-click="ucdFunc()" class="i1" src="../../assets/images/ucd.jpg">-->
+						<input ng-model=data ng-change="MicroApiProf()" type="radio" name="profile" value="MicroService API Management" style="margin-left:7%; margin-bottom: 30px"> MicroService API Management
+						<table class="techTable" border="1">
+							<!--<tr ng-repeat="x in tableData">-->
+							<tr>
+								<th> Practice Category </th>
+								<td> Think </td>
+								<td> Code </td>
+								<td> Deliver </td>
+								<td> Run </td>
+								<td> Learn </td>
+								<td> Manage </td>
+								<td> Culture </td>
+							</tr>
+							<tr>
+								<th> Practice </th>
+								<td> {{ micro_api_practice_think }} </td>
+								<td> {{ micro_api_practice_code }} </td>
+								<td> {{ micro_api_practice_deliver }} </td>
+								<td> {{ micro_api_practice_run }} </td>
+								<td> {{ micro_api_practice_learn }} </td>
+								<td> {{ micro_api_practice_manage }} </td>
+								<td> {{ micro_api_practice_culture }} </td>
+								<!-- <td> <a href="{{x['Link']}}"> <u> {{x['Practice']}} </u> </a></td>-->
+							</tr>
+							<tr>
+								<th> Tool </th>
+								<td> {{ micro_api_tool_think }} </td>
+								<td> {{ micro_api_tool_code }} </td>
+								<td> {{ micro_api_tool_deliver }} </td>
+								<td> {{ micro_api_tool_run }} </td>
+								<td> {{ micro_api_tool_learn }} </td>
+								<td> {{ micro_api_tool_manage }} </td>
+								<td> {{ micro_api_tool_culture }} </td>
+								<!--<td>{{x['Future Tool']}}</td>-->
+							</tr>
+							<!--</tr>-->
+						</table>
+					</div>
+
+					<div class="item1">
+						<!--<img data-ng-click="ucdFunc()" class="i1" src="../../assets/images/ucd.jpg">-->
+						<input ng-model=data ng-change="AndAppProf()" type="radio" name="profile" value="Android Applications" style="margin-left:7%; margin-bottom: 30px"> Android Applications
+						<table class="techTable" border="1">
+							<!--<tr ng-repeat="x in tableData">-->
+							<tr>
+								<th> Practice Category </th>
+								<td> Think </td>
+								<td> Code </td>
+								<td> Deliver </td>
+								<td> Run </td>
+								<td> Learn </td>
+								<td> Manage </td>
+								<td> Culture </td>
+							</tr>
+							<tr>
+								<th> Practice </th>
+								<td> {{ and_app_practice_think }} </td>
+								<td> {{ and_app_practice_code }} </td>
+								<td> {{ and_app_practice_deliver }} </td>
+								<td> {{ and_app_practice_run }} </td>
+								<td> {{ and_app_practice_learn }} </td>
+								<td> {{ and_app_practice_manage }} </td>
+								<td> {{ and_app_practice_culture }} </td>
+								<!-- <td> <a href="{{x['Link']}}"> <u> {{x['Practice']}} </u> </a></td>-->
+							</tr>
+							<tr>
+								<th> Tool </th>
+								<td> {{ and_app_tool_think }} </td>
+								<td> {{ and_app_tool_code }} </td>
+								<td> {{ and_app_tool_deliver }} </td>
+								<td> {{ and_app_tool_run }} </td>
+								<td> {{ and_app_tool_learn }} </td>
+								<td> {{ and_app_tool_manage }} </td>
+								<td> {{ and_app_tool_culture }} </td>
+								<!--<td>{{x['Future Tool']}}</td>-->
+							</tr>
+							</tr>
+						</table>
+					</div>
+
+					<div class="item1">
+						<!--<img data-ng-click="ucdFunc()" class="i1" src="../../assets/images/ucd.jpg">-->
+						<input ng-model=data ng-change="MidAppProf()" type="radio" name="profile" value="Middleware Applications" style="margin-left:7%; margin-bottom: 30px"> Middleware Applications <br>
+						<table class="techTable" border="1">
+							<!--<tr ng-repeat="x in tableData">-->
+							<tr>
+								<th> Practice Category </th>
+								<td> Think </td>
+								<td> Code </td>
+								<td> Deliver </td>
+								<td> Run </td>
+								<td> Learn </td>
+								<td> Manage </td>
+								<td> Culture </td>
+							</tr>
+							<tr>
+								<th> Practice </th>
+								<td> {{ mid_app_practice_think }} </td>
+								<td> {{ mid_app_practice_code }} </td>
+								<td> {{ mid_app_practice_deliver }} </td>
+								<td> {{ mid_app_practice_run }} </td>
+								<td> {{ mid_app_practice_learn }} </td>
+								<td> {{ mid_app_practice_manage }} </td>
+								<td> {{ mid_app_practice_culture }} </td>
+								<!-- <td> <a href="{{x['Link']}}"> <u> {{x['Practice']}} </u> </a></td>-->
+							</tr>
+							<tr>
+								<th> Tool </th>
+								<td> {{ mid_app_tool_think }} </td>
+								<td> {{ mid_app_tool_code }} </td>
+								<td> {{ mid_app_tool_deliver }} </td>
+								<td> {{ mid_app_tool_run }} </td>
+								<td> {{ mid_app_tool_learn }} </td>
+								<td> {{ mid_app_tool_manage }} </td>
+								<td> {{ mid_app_tool_culture }} </td>
+								<!--<td>{{x['Future Tool']}}</td>-->
+							</tr>
+							</tr>
+						</table>
+					</div>
+
+					<div class="item1">
+						<!--<img data-ng-click="ucdFunc()" class="i1" src="../../assets/images/ucd.jpg">-->
+						<input ng-model=data ng-change="BPMProf()" type="radio" name="profile" value="BPM" style="margin-left:7%; margin-bottom: 30px"> BPM <br>
+						<table class="techTable" border="1">
+							<!--<tr ng-repeat="x in tableData">-->
+							<tr>
+								<th> Practice Category </th>
+								<td> Think </td>
+								<td> Code </td>
+								<td> Deliver </td>
+								<td> Run </td>
+								<td> Learn </td>
+								<td> Manage </td>
+								<td> Culture </td>
+							</tr>
+							<tr>
+								<th> Practice </th>
+								<td> {{ bpm_practice_think }} </td>
+								<td> {{ bpm_practice_code }} </td>
+								<td> {{ bpm_practice_deliver }} </td>
+								<td> {{ bpm_practice_run }} </td>
+								<td> {{ bpm_practice_learn }} </td>
+								<td> {{ bpm_practice_manage }} </td>
+								<td> {{ bpm_practice_culture }} </td>
+								<!-- <td> <a href="{{x['Link']}}"> <u> {{x['Practice']}} </u> </a></td>-->
+							</tr>
+							<tr>
+								<th> Future Tool </th>
+								<td> {{ bpm_tool_think }} </td>
+								<td> {{ bpm_tool_code }} </td>
+								<td> {{ bpm_tool_deliver }} </td>
+								<td> {{ bpm_tool_run }} </td>
+								<td> {{ bpm_tool_learn }} </td>
+								<td> {{ bpm_tool_manage }} </td>
+								<td> {{ bpm_tool_culture }} </td>
+								<!--<td>{{x['Future Tool']}}</td>-->
+							</tr>
+							</tr>
+						</table>
+					</div>
+
+					<div class="item1">
+						<!--<img data-ng-click="ucdFunc()" class="i1" src="../../assets/images/ucd.jpg">-->
+						<!--<input ng-model="checkbox_value_6" ng-change="WCSProf()" style="margin-left:7%; margin-bottom: 30px" type="radio" /> WCS-->
+						<input ng-model=data ng-change="WCSProf()" type="radio" name="profile" value="WCS" style="margin-left:7%; margin-bottom: 30px"> WCS <br>
+						<table class="techTable" border="1">
+							<!--<tr ng-repeat="x in tableData">-->
+							<tr>
+								<th> Practice Category </th>
+								<td> Think </td>
+								<td> Code </td>
+								<td> Deliver </td>
+								<td> Run </td>
+								<td> Learn </td>
+								<td> Manage </td>
+								<td> Culture </td>
+							</tr>
+							<tr>
+								<th> Practice </th>
+								<td> {{ wcs_practice_think }} </td>
+								<td> {{ wcs_practice_code }} </td>
+								<td> {{ wcs_practice_deliver }} </td>
+								<td> {{ wcs_practice_run }} </td>
+								<td> {{ wcs_practice_learn }} </td>
+								<td> {{ wcs_practice_manage }} </td>
+								<td> {{ wcs_practice_culture }} </td>
+								<!-- <td> <a href="{{x['Link']}}"> <u> {{x['Practice']}} </u> </a></td>-->
+							</tr>
+							<tr>
+								<th> Tool </th>
+								<td> {{ wcs_tool_think }} </td>
+								<td> {{ wcs_tool_code }} </td>
+								<td> {{ wcs_tool_deliver }} </td>
+								<td> {{ wcs_tool_run }} </td>
+								<td> {{ wcs_tool_learn }} </td>
+								<td> {{ wcs_tool_manage }} </td>
+								<td> {{ wcs_tool_culture }} </td>
+								<!--<td>{{x['Future Tool']}}</td>-->
+							</tr>
+							</tr>
+						</table>
+						<br> <br>
+
+						<div>
+							<input ng-model=data ng-change="noProf()" type="radio" name="profile" value="No Tech" style="margin-left:7%; margin-bottom: 30px"> <b> I need some other Technology which is not mentioned here. </b>
+						</div>
+					</div>
+
+					<div ng-show="selectData" ng-click="profSubmit()" style="margin-left: 70%; color: #28a4c9; margin-top: 30px; margin-bottom: 30px;">
+						<a href="/selectCategory" class="btn btn-default"> Next >> </a>
+						<!--<button ng-disabled="myButton" ng-click="toolchainFunc()"  class="btn btn-default"> Create Toolchain</button>-->
+					</div>
+				</div>
+				<div class="model-footer" align="center" style="padding-bottom:7%;"><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button></div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="template-modal" class="modal fade" role="dialog">
+		<div class="terms-modal modal-dialog">
+			<!-- Modal content-->
+			<div class="terms-modal modal-content" align="left">
+				<div class="modal-header" align="center">
+					<h2>Header</h2>
+				</div>
+				<div class="modal-body" style="padding-top:3%;">					 
+					
+				</div>
+				<div class="model-footer" align="center" style="padding-bottom:7%;"><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button></div>
+			</div>
+		</div>
+	</div>
 	
 
     <!-- jQuery -->
@@ -732,6 +1258,15 @@
 
     <!-- Theme JavaScript -->
     <script src="js/ngadmp.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		$("#myBtn").click(function(){
+			$("#toolchain-modal").modal();
+		});
+	});
+	</script>
+	
 
 </body>
 
