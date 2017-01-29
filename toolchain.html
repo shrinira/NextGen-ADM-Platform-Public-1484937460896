@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="shrinira@in.ibm.com">
+
+    <title>Next Gen ADM Platform</title>
+
+    <!-- Bootstrap Core CSS -->
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+    <!-- Page CSS -->
+		<link href="css/ngadmp.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+		<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	
+
+	<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+
+	<!-- Bootstrap Core JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!-- Plugin JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	
+	<!-- Toolchain -->
+		<script src=""></script>
+		<script src="toolchain/projectarea.js"></script>
+		<script src="toolchain/project_table.js"></script>
+		<script src="toolchain/selectTech.js"></script>
+		<script src="toolchain/toolchain.controller.js"></script>
+		<script src="toolchain/toolchain.js"></script>
+		<script src="toolchain/createtoolchain.js"></script>
+		
+
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<!-- <base target="_blank">  -->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+				<a href="http://www.ibm.com/devops" target="_blank"><img src=".\img\IBMlogow.png" height="52"></a>
+			</div>
+			<div class="navbar-header page-scroll">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Next Gen ADM Platform</a>
+            </div>
+			
+            <!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden li-nav">
+                        <a href="#page-top"></a>
+                    </li>
+					<li class="hidden li-nav">
+                        <a href="#contact"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+	
+    <!-- Header -->
+    <header>
+    </header>
+	
+	</br></br></br></br></br></br>
+	
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<p class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#projectdetails">
+							Step 1: Provide Project Details</a>
+						</p>
+					</div>
+					<div id="projectdetails" class="panel-collapse collapse in">
+						<div class="panel-body" class="white">
+					
+							<!-- Project Details -->
+							<div class="container" style="padding-right:7%; padding-left:7%;">
+								<div class="row">
+									<div class="col-lg-12">
+										<form name="userForm" novalidate>
+
+											<div class="form-group" ng-class="{ 'has-error' : userForm.Project_name.$invalid && !userForm.Project_name.$pristine }">
+												<label> Project Name <span class="form-required"> * </span>
+													<a target="_blank" title="The name of the project to be created"><img style="cursor: pointer;" src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="10px"/></a>
+												</label>
+												<input type="text" name="Project_name" class="form-control" ng-model="proje_name" required>
+												<p ng-show="userForm.Project_name.$invalid && !userForm.Project_name.$pristine" class="help-block"> Project name is required.</p>
+											</div>
+
+											<div class="form-group" ng-class="{ 'has-error' : userForm.Project_ID.$invalid && !userForm.Project_ID.$pristine }">
+												<label> Project ID <span class="form-required"> * </span>
+													<a target="_blank" title="The Account ID of your project"><img style="cursor: pointer;" src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="10px"/></a>
+												</label>
+												<input type="text" name="Project_ID" class="form-control" ng-model="proj_id" placeholder="Format: IN-00-00000" required>
+												<p ng-show="userForm.Project_ID.$invalid && !userForm.Project_ID.$pristine" class="help-block"> Project ID is required.</p>
+											</div>
+
+											<div class="form-group" ng-class="{ 'has-error' : userForm.Department_name.$invalid && !userForm.Department_name.$pristine }">
+												<label> Department Name <span class="form-required"> * </span>
+													<a target="_blank"title="The Department code of your project"><img style="cursor: pointer;" src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="10px"/></a>
+												</label>
+												<input type="text" name="Department_name" class="form-control" ng-model="dept_name" placeholder="Format: ABC" required>
+												<p ng-show="userForm.Department_name.$invalid && !userForm.Department_name.$pristine" class="help-block"> Department Name is required.</p>
+											</div>
+
+											<!-- EMAIL -->
+											<div class="form-group" ng-class="{ 'has-error' : userForm.Project_Admin.$invalid && !userForm.Project_Admin.$pristine }">
+												<label> Project Admin <span class="form-required"> * </span>
+													<a target="_blank" title="The user ID for whom the Admin access will be provided"><img style="cursor: pointer;" src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="10px"/></a>
+												 </label>
+												<input type="text" name="Project_Admin" class="form-control" ng-model="proje_admin" placeholder="Primary IBM w3 ID" required>
+												<p ng-show="userForm.Project_Admin.$invalid && !userForm.Project_Admin.$pristine" class="help-block"> Admin to the project is required.</p>
+											</div>
+
+											<div class="form-group" ng-class="{ 'has-error' : userForm.NoofUsers.$invalid && !userForm.NoofUsers.$pristine }">
+												<label> No.of Users: <span class="form-required"> * </span>
+													<a target="_blank" title="Tentative count of users who will be using the tools "><img style="cursor: pointer;" src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="10px"/></a>
+												</label>
+												<input type="text" name="NoofUsers" class="form-control" ng-model="user_count" ng-change="costFunc()" placeholder="Tentative count" required>
+												<p ng-show="userForm.NoofUsers.$invalid && !userForm.NoofUsers.$pristine" class="help-block"> Tentative count of Users is required.</p>
+											</div>
+
+											<div >
+											 <table>
+													<tr ng-show="costDisplay">
+														</br> </br>
+														<td> One Time Setup Cost per user:</br> </td>
+														<td> {{ user_count*299 }} $ </td>
+													</tr>
+													<tr ng-show="costDisplay">
+														<td> Monthly recurring cost per user:</br> </td>
+														<td> {{ user_count*89 }} $ </br></td>
+													</tr>
+											</table>
+											</div>
+											</br>
+											<div style="margin-bottom: 10%">
+												<input id="checkbox1" type="checkbox" name="authAgree" value="authAgree" onclick="check()" ng-model="authAgree" ng-change="AuthAgree()" style="margin-left:10%; margin-top: 15px"  /> I confirm that I am authorized to create the toolchain for the above mentioned Project, which will result in additional cost for the above project. I am aware that <b style="color: red"> unauthorized creation of toolchain and incurring costs to IBM could be in violation of IBM Business Conduct Guidelines</b> </br></br>
+												<input id="checkbox2" type="checkbox" name="licenseAgree" value="licenseAgree" onclick="check()" ng-model="licenseAgree" ng-change="LicenseAgree()" style="margin-left:10%"  />  I confirm that I have read and accepted the <a ng-href="/termsofuse"> Platform Terms of Use </a>
+											</div>
+											<div align="center">
+												<button type="button" class="btn btn-primary btn-md btn-step1">
+												Next&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>
+												</button>
+											</div></br>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<div class="progress">
+								<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+					  <p class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#projecttech">
+						Step 2: Select Project Profile and Technologies</a>
+					  </p>
+					</div>
+					<div id="projecttech" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div>
+								</br><p>Please select One of the Project Profile that Best suits your Project</p></br>
+								<ul class="nav nav-tabs">
+									<li class="active"><a data-toggle="tab" href="#webapp">Web Application</a></li>
+									<li><a data-toggle="tab" href="#microservice">MicroService API Management</a></li>
+									<li><a data-toggle="tab" href="#andriod">Android Applications</a></li>
+									<li><a data-toggle="tab" href="#middleware">Middleware Applications</a></li>
+									<li><a data-toggle="tab" href="#wcs">WCS</a></li>
+									<li><a data-toggle="tab" href="#bpm">BPM</a></li>
+									<li><a data-toggle="tab" href="#other">Other</a></li>
+								</ul>
+								
+								<div class="tab-content">
+									<div id="webapp" class="tab-pane fade in active">
+										
+										<table class="table table-responsive table-hover table-bordered">
+											<tr>
+												</br><p class="section-title">Web Application&nbsp;&nbsp;
+												<input ng-model=data ng-change="WebAppProf()" type="radio" name="profile" value="Web Application" style="margin-left:7%; margin-bottom: 30px"></p>
+											</tr>
+											<tr align="center">
+												<th> Practice Category </th>
+												<th> Practice </th>
+												<th> Tool </th>
+											</tr>
+											<tr>
+												<th>Think</th>
+												<td> {{ web_app_practice_think }} </td>
+												<td> {{ web_app_tool_think }} </td>
+											</tr>
+											<tr>
+												<th> Code </th>
+												<td> {{ web_app_practice_code }} </td>
+												<td> {{ web_app_tool_code }} </td>
+											</tr>
+											<tr>
+												<th> Deliver </th>
+												<td> {{ web_app_practice_deliver }} </td>
+												<td> {{ web_app_tool_deliver }} </td>
+											</tr>
+											<tr>
+												<th> Run </th>
+												<td> {{ web_app_practice_run }} </td>
+												<td> {{ web_app_tool_run }} </td>
+											</tr>
+											<tr>
+												<th> Learn </th>
+												<td> {{ web_app_practice_learn }} </td>
+												<td> {{ web_app_tool_learn }} </td>
+											</tr>
+											<tr>
+												<th> Manage </th>
+												<td> {{ web_app_practice_manage }} </td>
+												<td> {{ web_app_tool_manage }} </td>
+											</tr>
+											<tr>
+												<th> Culture </th>
+												<td> {{ web_app_practice_culture }} </td>
+												<td> {{ web_app_tool_culture }} </td>
+											</tr>
+										</table>
+									</div>
+									
+									<div id="microservice" class="tab-pane fade">
+										
+										<table class="table table-responsive table-hover table-bordered">
+											<tr>
+												</br><p class="section-title">MicroService API Management&nbsp;&nbsp;
+												<input ng-model=data ng-change="MicroApiProf()" type="radio" name="profile" value="MicroService API Management" style="margin-left:7%; margin-bottom: 30px"></p>
+											</tr>
+											
+											<tr align="center">
+												<th> Practice Category </th>
+												<th> Practice </th>
+												<th> Tool </th>
+											</tr>
+											<tr>
+												<th>Think</th>
+												<td> {{ micro_api_practice_think }} </td>
+												<td> {{ micro_api_tool_think }} </td>
+											</tr>
+											<tr>
+												<th> Code </th>
+												<td> {{ micro_api_practice_code }} </td>
+												<td> {{ micro_api_tool_code }} </td>
+											</tr>
+											<tr>
+												<th> Deliver </th>
+												<td> {{ micro_api_practice_deliver }} </td>
+												<td> {{ micro_api_tool_deliver }} </td>
+											</tr>
+											<tr>
+												<th> Run </th>
+												<td> {{ micro_api_practice_run }} </td>
+												<td> {{ micro_api_tool_run }} </td>
+											</tr>
+											<tr>
+												<th> Learn </th>
+												<td> {{ micro_api_practice_learn }} </td>
+												<td> {{ micro_api_tool_learn }} </td>
+											</tr>
+											<tr>
+												<th> Manage </th>
+												<td> {{ micro_api_practice_manage }} </td>
+												<td> {{ micro_api_tool_manage }} </td>
+											</tr>
+											<tr>
+												<th> Culture </th>
+												<td> {{ micro_api_practice_culture }} </td>
+												<td> {{ micro_api_tool_culture }} </td>
+											</tr>
+										</table>
+									</div>
+									<div id="andriod" class="tab-pane fade">
+											
+										<table class="table table-responsive table-hover table-bordered">
+											<tr>
+												</br><p class="section-title">Android Applications&nbsp;&nbsp;
+												<input ng-model=data ng-change="AndAppProf()" type="radio" name="profile" value="Android Applications" style="margin-left:7%; margin-bottom: 30px"></p>
+											</tr>
+											<tr align="center">
+												<th> Practice Category </th>
+												<th> Practice </th>
+												<th> Tool </th>
+											</tr>
+											<tr>
+												<th>Think</th>
+												<td> {{ and_app_practice_think }} </td>
+												<td> {{ and_app_tool_think }} </td>
+											</tr>
+											<tr>
+												<th> Code </th>
+												<td> {{ and_app_practice_code }} </td>
+												<td> {{ and_app_tool_code }} </td>
+											</tr>
+											<tr>
+												<th> Deliver </th>
+												<td> {{ and_app_practice_deliver }} </td>
+												<td> {{ and_app_tool_deliver }} </td>
+											</tr>
+											<tr>
+												<th> Run </th>
+												<td> {{ and_app_practice_run }} </td>
+												<td> {{ and_app_tool_run }} </td>
+											</tr>
+											<tr>
+												<th> Learn </th>
+												<td> {{ and_app_practice_learn }} </td>
+												<td> {{ and_app_tool_learn }} </td>
+											</tr>
+											<tr>
+												<th> Manage </th>
+												<td> {{ and_app_practice_manage }} </td>
+												<td> {{ and_app_tool_manage }} </td>
+											</tr>
+											<tr>
+												<th> Culture </th>
+												<td> {{ and_app_practice_culture }} </td>
+												<td> {{ and_app_tool_culture }} </td>
+											</tr>
+										</table>
+									</div>
+
+									<div id="middleware" class="tab-pane fade">
+										
+										<table class="table table-responsive table-hover table-bordered">
+											<tr>
+												</br><p class="section-title">Middleware Applications&nbsp;&nbsp;
+												<input ng-model=data ng-change="MidAppProf()" type="radio" name="profile" value="Middleware Applications" style="margin-left:7%; margin-bottom: 30px"></p>
+											</tr>
+											
+											<tr align="center">
+												<th> Practice Category </th>
+												<th> Practice </th>
+												<th> Tool </th>
+											</tr>
+											<tr>
+												<th>Think</th>
+												<td> {{ mid_app_practice_think }} </td>
+												<td> {{ mid_app_tool_think }} </td>
+											</tr>
+											<tr>
+												<th> Code </th>
+												<td> {{ mid_app_practice_code }} </td>
+												<td> {{ mid_app_tool_code }} </td>
+											</tr>
+											<tr>
+												<th> Deliver </th>
+												<td> {{ mid_app_practice_deliver }} </td>
+												<td> {{ mid_app_tool_deliver }} </td>
+											</tr>
+											<tr>
+												<th> Run </th>
+												<td> {{ mid_app_practice_run }} </td>
+												<td> {{ mid_app_tool_run }} </td>
+											</tr>
+											<tr>
+												<th> Learn </th>
+												<td> {{ mid_app_practice_learn }} </td>
+												<td> {{ mid_app_tool_learn }} </td>
+											</tr>
+											<tr>
+												<th> Manage </th>
+												<td> {{ mid_app_practice_manage }} </td>
+												<td> {{ mid_app_tool_manage }} </td>
+											</tr>
+											<tr>
+												<th> Culture </th>
+												<td> {{ mid_app_practice_culture }} </td>
+												<td> {{ mid_app_tool_culture }} </td>
+											</tr>
+										</table>
+									</div>
+
+									<div id="bpm" class="tab-pane fade">
+											
+										<table class="table table-responsive table-hover table-bordered">
+											<tr>
+												</br><p class="section-title">BPM&nbsp;&nbsp;
+												<input ng-model=data ng-change="BPMProf()" type="radio" name="profile" value="BPM" style="margin-left:7%; margin-bottom: 30px"></p>
+											</tr>
+											
+											<tr align="center">
+												<th> Practice Category </th>
+												<th> Practice </th>
+												<th> Tool </th>
+											</tr>
+											<tr>
+												<th>Think</th>
+												<td> {{ bpm_practice_think }} </td>
+												<td> {{ bpm_tool_think }} </td>
+											</tr>
+											<tr>
+												<th> Code </th>
+												<td> {{ bpm_practice_code }} </td>
+												<td> {{ bpm_tool_code }} </td>
+											</tr>
+											<tr>
+												<th> Deliver </th>
+												<td> {{ bpm_practice_deliver }} </td>
+												<td> {{ bpm_tool_deliver }} </td>
+											</tr>
+											<tr>
+												<th> Run </th>
+												<td> {{ bpm_practice_run }} </td>
+												<td> {{ bpm_tool_run }} </td>
+											</tr>
+											<tr>
+												<th> Learn </th>
+												<td> {{ bpm_practice_learn }} </td>
+												<td> {{ bpm_tool_learn }} </td>
+											</tr>
+											<tr>
+												<th> Manage </th>
+												<td> {{ bpm_practice_manage }} </td>
+												<td> {{ bpm_tool_manage }} </td>
+											</tr>
+											<tr>
+												<th> Culture </th>
+												<td> {{ bpm_practice_culture }} </td>
+												<td> {{ bpm_tool_culture }} </td>
+											</tr>
+										</table>
+									</div>
+
+									<div id="wcs" class="tab-pane fade">
+											
+										<table class="table table-responsive table-hover table-bordered">
+											<tr>
+												</br><p class="section-title">WCS&nbsp;&nbsp;
+												<input ng-model=data ng-change="WCSProf()" type="radio" name="profile" value="WCS" style="margin-left:7%; margin-bottom: 30px"></p>
+											</tr>
+											<tr align="center">
+												<th> Practice Category </th>
+												<th> Practice </th>
+												<th> Tool </th>
+											</tr>
+											<tr>
+												<th>Think</th>
+												<td> {{ wcs_practice_think }} </td>
+												<td> {{ wcs_tool_think }} </td>
+											</tr>
+											<tr>
+												<th> Code </th>
+												<td> {{ wcs_practice_code }} </td>
+												<td> {{ wcs_tool_code }} </td>
+											</tr>
+											<tr>
+												<th> Deliver </th>
+												<td> {{ wcs_practice_deliver }} </td>
+												<td> {{ wcs_tool_deliver }} </td>
+											</tr>
+											<tr>
+												<th> Run </th>
+												<td> {{ wcs_practice_run }} </td>
+												<td> {{ wcs_tool_run }} </td>
+											</tr>
+											<tr>
+												<th> Learn </th>
+												<td> {{ wcs_practice_learn }} </td>
+												<td> {{ wcs_tool_learn }} </td>
+											</tr>
+											<tr>
+												<th> Manage </th>
+												<td> {{ wcs_practice_manage }} </td>
+												<td> {{ wcs_tool_manage }} </td>
+											</tr>
+											<tr>
+												<th> Culture </th>
+												<td> {{ wcs_practice_culture }} </td>
+												<td> {{ wcs_tool_culture }} </td>
+											</tr>
+										</table>
+									</div>
+									
+									<div id="other" class="tab-pane fade">
+											</br><p class="section-title">Other&nbsp;&nbsp;
+											<input ng-model=data ng-change="noProf()" type="radio" name="profile" value="No Tech" style="margin-left:7%; margin-bottom: 30px"> <i> </br>I need some other Technology which is not mentioned here. </i></p>
+									</div>
+								</div></br></br>
+								<div align="center">
+									<button type="button" class="btn btn-primary btn-md btn-step2">
+									Next&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>
+									</button>
+								</div></br>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<div class="progress">
+								<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<p class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#practices">
+						Step 3: Select the Applicable Practices and Tools</a>
+					  </p>
+					</div>
+					<div id="practices" class="panel-collapse collapse">
+						<div class="panel-body">
+
+							<div>
+								<p style="margin-left:10%; margin-top: 30px"> Profile Selected : <b> {{profSelected}} </b> </p>
+								<div>
+									<table class="techTable">
+										<th> </th>
+										<th> Practice </th>
+										<th> Tool </th>
+										<tr ng-repeat="x in tool">
+											<td style="width: 50px"> <input ng-model="checkboxValue" ng-checked="checkFunc(x, (practices[tool.indexOf(x)].join()))" ng-disabled="checkBoxdisable(x, (practices[tool.indexOf(x)].join()))" id={{x}} class="messageCheckbox" type="checkbox" value={{x}} > </td>
+											<td > {{ practices[tool.indexOf(x)].join() }} </td>
+											<td ng-style="grayoutFunc(x)"> {{ x }} </td>
+										</tr>
+									</table>
+								</div>
+								<div>
+									<input ng-model=data1 ng-change="AddTool()" id="Check1" style="margin-left:10%; margin-top: 30px" ng-disabled="myButton()" type="checkbox" name="Tools" value="1" /> <b> Additional  Tools  </b> <br> <br>
+									<div ng-show="addMessage" style="margin-left:150px"> <p> <i> Please contact Project Liberty Team for Additional tools. In the meantime, a default toolchain will be created for you </i></p></div><br> <br>
+									<input ng-model=toolButton ng-change="AltTool()" style="margin-left:10%" type="checkbox" name="Tools" value="2" />  <b> Alternate Tools </b> <br> <br>
+									<div ng-show="altMessage" style="margin-left:150px" > <p> <i> Please contact Project Liberty team for provisioning Alternate Tools </i></p><br>
+											<a ng-click="AltFunc()" style="margin-left: 30px" href="/home" class="btn btn-default"> Close </a>
+											<!--<button ng-disabled="myButton" ng-click="toolhainFunc()"  class="btn btn-default"> Create Toolchain</button>-->
+									</div>
+								</div>
+							</div></br>
+							
+							<!-- <div style="margin-left: 70%; margin-top: 30px; color: #28a4c9; margin-bottom: 30px;">
+								<button ng-disabled="myButton()" ng-click="toolchainFunc()" class="btn btn-primary btn-lg"> Create Toolchain </a></button>
+							</div>  -->
+							
+							
+							<div align="center">
+								<button type="button" class="btn btn-primary btn-lg btn-step3">
+								Create Toolchain&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok"></span>
+								</button>
+							</div></br>
+							
+						</div>
+						<div class="panel-footer">
+							<div class="progress">
+								<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<p class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#result">
+						Step 4: Result of Toolchain creation</a>
+					  </p>
+					</div>
+					<div id="result" class="panel-collapse collapse">
+						<div class="panel-body" style="background: #F9F9F9; border: 1px solid #E1E1E8; margin: 10px 0; padding: 8px;">
+							<div>
+								<div class="orderClass" ng-show="orderStatus">
+								<p> Your selected tools {{ tools_selected }} have been provisioned </p>
+								<p> Your order ID is {{ order_Id }}</p>
+								</div>
+
+								<div class="linkClass" ng-show="orderStatus">
+									<div>
+										<p> Link to your GitLab project : <a href='"https://gbsgittest.in.edst.ibm.com/"+{{projectName}}+"/"+{{projectName}}+"/"'> <u> https://gbsgittest.in.edst.ibm.com/{{projectName}}/{{projectName}} </u> </a></p>
+									</div>
+
+									<div>
+										<p> Link to your Jenkins project : <a href='"http://134.168.59.19:8080/job/"+{{projectName}}+"/"'> <u> http://134.168.59.19:8080/job/{{projectName}} </u> </a></p>
+									</div>
+
+									<div>
+										<p> Link to you Jira project : <a href="https://gbsjiratest.in.edst.ibm.com/"> <u> https://gbsjiratest.in.edst.ibm.com/ </u> </a></p>
+									</div>
+								</div>
+								</br></br>
+								<p><i>You will soon receive an email from projectliberty@in.ibm.com with the above details.</i></p>
+							</div>
+							
+							</br>
+							<div align="right" style="margin-right: 20%">
+								<a href="./index.html" target="_parent">
+									<button class="btn btn-success btn-lg"> Close&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-ok-circle"></span></button>
+								</a>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<div class="progress">
+								<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div> 
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+	
+	
+    <!-- Site JavaScript -->
+    <script src="js/ngadmp.js"></script>
+	
+	
+	<!-- Page JavaScript -->
+	<script>
+	$(document).ready(function(){
+		$(".btn-step1").click(function(){
+			$("#projecttech").collapse('show');
+			scrollTo(0,0);
+		});
+		
+		$(".btn-step2").click(function(){
+			$("#practices").collapse('show');
+			scrollTo(0,0);
+		});
+		
+		$(".btn-step3").click(function(){
+			$("#result").collapse('show');
+			scrollTo(0,0);
+		});
+		
+		$('#projectdetails').on('show.bs.collapse', function(){
+			$("#projecttech").collapse('hide');
+			$("#practices").collapse('hide');
+			$("#result").collapse('hide');
+		});
+		
+		$('#projecttech').on('show.bs.collapse', function(){
+			$("#projectdetails").collapse('hide');
+			$("#practices").collapse('hide');
+			$("#result").collapse('hide');
+		});
+		
+		$('#practices').on('show.bs.collapse', function(){
+			$("#projectdetails").collapse('hide');
+			$("#projecttech").collapse('hide');
+			$("#result").collapse('hide');
+		});
+		
+		$('#result').on('show.bs.collapse', function(){
+			$("#projectdetails").collapse('hide');
+			$("#projecttech").collapse('hide');
+			$("#practices").collapse('hide');
+		});
+		
+	});
+	
+	window.onload = function() {
+		setTimeout (function () {
+		scrollTo(0,0);
+		}, 50);
+	}
+	
+	</script>
+	
+
+</body>
+
+</html>
